@@ -2,16 +2,19 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { View } from 'react-native';
 
-import * as eva from '@eva-design/eva';
-import { ApplicationProvider, Text } from '@ui-kitten/components';
+import SignUp from './pages/SignUp';
+import { PaperProvider } from 'react-native-paper';
+import { NavigationContainer } from '@react-navigation/native';
+import NavigationStack from './components/NavigationStack';
 
 export default function App() {
   return (
-    <ApplicationProvider {...eva} theme={eva.light}>
-      <View className="flex-1 items-center justify-center bg-white">
-        <Text>Open up App.tsx to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View>
-    </ApplicationProvider>
+    <PaperProvider>
+      <NavigationContainer>
+        <View className="flex-1 bg-white">
+          <NavigationStack />
+        </View>
+      </NavigationContainer>
+    </PaperProvider>
   );
 }
