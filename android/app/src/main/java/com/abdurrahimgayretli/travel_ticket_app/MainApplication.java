@@ -1,4 +1,4 @@
-package com.anonymous.travel_ticket_app;
+package com.abdurrahimgayretli.travel_ticket_app;
 
 import android.app.Application;
 import android.content.res.Configuration;

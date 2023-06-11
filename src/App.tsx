@@ -11,7 +11,7 @@ export default function App() {
   return (
     <PaperProvider>
       <NavigationContainer>
-        <View className="flex-1 bg-white">
+        <View className="flex-1 ">
           <NavigationStack />
         </View>
       </NavigationContainer>

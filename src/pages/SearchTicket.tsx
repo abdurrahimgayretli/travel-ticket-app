@@ -19,12 +19,11 @@ const SearchTicket = ({ navigation }: any) => {
     date: new Date(Date.now()),
   });
   return (
-    <View className="self-center w-[90%] rounded-md p-[1vh] top-[25%]">
+    <View className="self-center w-[90%] rounded-md p-[1vh] top-[%10]">
       {searchArray.map((index, i) => {
         return (
-          <View>
-            <Text className="text-base font-bold">{index}</Text>
-            <Input inputName={index} height={6} />
+          <View key={i}>
+            <Input inputName={index} height={6} font={'font-bold text-base'}/>
           </View>
         );
       })}
@@ -53,7 +52,7 @@ const SearchTicket = ({ navigation }: any) => {
         mode="contained"
         className=" bg-gray-600 w-[90%] self-center mt-1"
         onPress={() => {
-          navigation.navigate('Search Ticket');
+          navigation.navigate('Select Expedition');
         }}>
         Search Ticket
       </Button>

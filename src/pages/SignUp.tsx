@@ -36,13 +36,12 @@ const SignUp = ({ navigation }: any) => {
     rePassword: '',
   });
   return (
-    <View className="self-center h-full w-[90%] rounded-md p-[1vh]">
+    <View className="self-center h-full w-[90%] rounded-md">
       <ScrollView>
         {userInfoArray.map((index, i) => {
           return (
             <View key={i}>
-              <Text className="text-xs">{index}</Text>
-              <Input inputName={index} height={4} />
+              <Input inputName={index} height={5} />
             </View>
           );
         })}

@@ -113,9 +113,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.anonymous.travel_ticket_app'
+    namespace 'com.abdurrahimgayretli.travel_ticket_app'
     defaultConfig {
-        applicationId 'com.anonymous.travel_ticket_app'
+        applicationId 'com.abdurrahimgayretli.travel_ticket_app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

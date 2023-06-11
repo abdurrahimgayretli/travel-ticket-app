@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.travel_ticket_app"
+      "package": "com.abdurrahimgayretli.travel_ticket_app"
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -6,17 +6,19 @@ import { View } from 'react-native';
 interface content {
   inputName: string;
   height: number;
+  font?: string;
 }
 
 const Input = (props: content) => {
   return (
-    <View>
+    <>
+      <Text className={`text-xs ${props.font}`}>{props.inputName}</Text>
       <TextInput
-        className={`bg-white self-center w-[100%] mb-1 h-[${props.height.toString()}vh]`}
+        className={`bg-white self-center mb-1 text-sm  w-[100%] h-[${props.height.toString()}vh]`}
         mode="outlined"
         outlineColor="gray"
       />
-    </View>
+    </>
   );
 };
 
