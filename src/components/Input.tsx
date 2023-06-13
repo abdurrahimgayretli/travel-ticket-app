@@ -7,7 +7,8 @@ interface content {
   inputName: string;
   height: number;
   font?: string;
-  secure?:boolean
+  borderColor?: boolean;
+  secure?: boolean;
   inputMode?: InputModeOptions;
   onChange?: Function;
 }
@@ -20,7 +21,8 @@ const Input = (props: content) => {
         onChangeText={(e) => props.onChange!(e)}
         secureTextEntry={props.secure}
         inputMode={props.inputMode}
-        className={`bg-white self-center mb-1 text-sm  w-[100%] h-[${props.height.toString()}vh]`}
+        outlineStyle={{ borderColor: `${props.borderColor ? 'red' : 'gray'}` }}
+        className={`bg-white self-center mb-1 text-sm w-[100%] h-[${props.height.toString()}vh]`}
         mode="outlined"
         outlineColor="gray"
       />

@@ -13,6 +13,7 @@ interface userInfoType {
 const Login = ({ navigation, route }: any) => {
   const users = useAppSelector(usersContent);
 
+  const [check, setCheck] = useState(false);
   const userInfoArray = ['E-mail', 'Password'];
   const [userInfo, setUserInfo] = useState<userInfoType>({
     email: '',
@@ -33,20 +34,43 @@ const Login = ({ navigation, route }: any) => {
     ) {
       navigation.navigate('Search Ticket');
     } else {
+      setCheck(true);
       ToastAndroid.show(
         'The user for the information you entered could not be found.',
         ToastAndroid.SHORT
       );
     }
   };
+
+  useEffect(() => {
+    if (userInfo.email.length + userInfo.password.length > 0) {
+      setCheck(false);
+    }
+  }, [userInfo]);
+
   return (
     <View className="self-center w-[90%] rounded-md p-[1vh] top-[5%]">
       <ScrollView>
-        <Input onChange={onChangeEmail} inputName={userInfoArray[0]} height={5} />
-        <Input secure={true} onChange={onChangePassWord} inputName={userInfoArray[1]} height={5} />
+        <Input
+          borderColor={check}
+          onChange={onChangeEmail}
+          inputName={userInfoArray[0]}
+          height={5}
+        />
+        <Input
+          borderColor={check}
+          secure={true}
+          onChange={onChangePassWord}
+          inputName={userInfoArray[1]}
+          height={5}
+        />
         <Text className="text-right mb-1">
           I'm a new user{' '}
-          <Text className="underline text-purple-600" onPress={() => {navigation.navigate('Sign Up')}}>
+          <Text
+            className="underline text-purple-600"
+            onPress={() => {
+              navigation.navigate('Sign Up');
+            }}>
             Sign Up
           </Text>
         </Text>

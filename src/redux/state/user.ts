@@ -11,7 +11,7 @@ export interface UserType {
 }
 
 const initialState: UserType = {
-  usersInfo: [{ email: 'admin', password: 'admin' }],
+  usersInfo: [{ email: 'admin@gmail.com', password: 'admin' }],
 };
 
 const userSlice = createSlice({
