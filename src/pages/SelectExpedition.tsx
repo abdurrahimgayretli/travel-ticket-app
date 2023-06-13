@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { DataTable } from 'react-native-paper';
 import { exditions } from '../data';
 
-const numberOfItemsPerPageList = [2, 3, 4];
+const numberOfItemsPerPageList = [4,5,6];
 
 const SelectExpedition = ({ navigation }: any) => {
   const [page, setPage] = React.useState(0);
